@@ -7,6 +7,7 @@ sobre ellos.
 
 ### Tecnologias utilizadas hasta el momento:
 - Node.js
+- Servidor de Google Cloud Platform
 
 ### Que se puede hacer hasta el momento en la app:
 - Crear Usuarios
