@@ -10,9 +10,9 @@ sobre ellos.
 - Servidor de Google Cloud Platform
 
 ### Que se puede hacer hasta el momento en la app:
-- Crear Usuarios
-- Crear, obtener, modificar y borrar Productos
-- Crear, modificar, borrar y ver Reviews de productos
+- Usuarios: Alta, login
+- Productos: Alta, Consultar, modificar y borrar 
+- Reviews: Crear, modificar, borrar y consultar por producto
 
 ### Equipo 27
 - Integrante: Omar Monreal
