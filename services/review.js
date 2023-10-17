@@ -21,3 +21,12 @@ exports.deleteById = async function (id) {
 exports.findReviewById = function (id) {
   return Review.findByPk(id);
 };
+
+
+exports.findAllbyProd = function (productId) {
+  return Review.findAll({
+    where: {
+      productId,
+    }
+  });
+};

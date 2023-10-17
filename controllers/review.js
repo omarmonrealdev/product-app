@@ -1,4 +1,4 @@
-const { insert, deleteById, update, findReviewById } = require('../services/review');
+const { insert, deleteById, update, findReviewById, findAllbyProd } = require('../services/review');
 const { findById } = require("../services/product");
 
 exports.createReview = async function (request, response) {
@@ -7,7 +7,7 @@ exports.createReview = async function (request, response) {
 
   if (!await findById(productId)) {
     return response.status(401).json ({
-      message: 'El Producto del que quires opinar no esta disponible',
+      message: 'El Producto del que quieres opinar no esta disponible',
       messageDev: 'No se encontro el producto en la base de datos',
       code: 'ERR_AUTH',
     });
@@ -48,3 +48,10 @@ exports.deleteReview = async function (request, response) {
   response.status(204).end();
 };
 
+
+exports.getRevByProduct = async function (request, response) {
+  const productId = request.params.id;
+
+  const reviews = await findAllbyProd(productId);
+  response.status(200).json(reviews);
+}

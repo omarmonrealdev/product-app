@@ -4,6 +4,7 @@ const {
   createReview,
   deleteReview,
   updateReview,
+  getRevByProduct,
 } = require("../controllers/review");
 
 const { createReviewSchema, updateReviewSchema, paramsSchema } = require('../validations/review');
@@ -13,9 +14,21 @@ const validator = require('../middlewares/validator');
 const jwtValidator = require('../middlewares/jwt');
 
 
-router.post("/products/:id/reviews", jwtValidator, validator.params(paramsSchema), validator.body(createReviewSchema), createReview);
-router.put("/reviews/:id", jwtValidator, validator.params(paramsSchema), validator.body(updateReviewSchema), updateReview);
+router.post("/products/:id/reviews", 
+            jwtValidator, 
+            validator.params(paramsSchema), 
+            validator.body(createReviewSchema), 
+            createReview);
+
+router.put("/reviews/:id", 
+            jwtValidator, 
+            validator.params(paramsSchema), 
+            validator.body(updateReviewSchema), 
+            updateReview);
+            
 router.delete("/reviews/:id", jwtValidator, validator.params(paramsSchema), deleteReview);
+
+router.get("/products/:id/reviews", validator.params(paramsSchema), getRevByProduct);
 
 
 module.exports = router;

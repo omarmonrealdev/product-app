@@ -1,4 +1,4 @@
-# Nombre del Proyecto: Product App
+# Nombre del Proyecto: Product-App API
 
 ## Descripción
 La empresa para la que laboro, fabrica stress relievers, la intencion es crear un sitio web
@@ -11,8 +11,8 @@ sobre ellos.
 ### Que se puede hacer hasta el momento en la app:
 - Crear Usuarios
 - Crear, obtener, modificar y borrar Productos
-- Crear, modificar y borrar Reviews de productos
+- Crear, modificar, borrar y ver Reviews de productos
 
 ### Equipo 27
-- Integrantes: Omar Monreal
+- Integrante: Omar Monreal
 - email: omarmonros@gmail.com
