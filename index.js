@@ -16,6 +16,10 @@ const authRouter = require('./routers/auth');
 const validationError = require('./middlewares/validation-error');
 const unknownError = require('./middlewares/unknown-error');
 
+//cors
+let cors = require("cors");
+app.use(cors());
+
 
 app.use(userRouter);
 app.use(productRouter);
